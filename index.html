@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenziefy</title>
+    <link rel='stylesheet' href='./styles/style.css'>
+    <link rel='shortcut icon' href='./assets/img/kenzie-logo.jpg'>
+</head>
+<body>
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+
+        <!-- SIDEBAR -->
+        <aside id='sidebar'>
+            <img src='./assets/img/logo.png' alt='Logo Kenziefy' id='logoKenzie'>
+
+            <!-- LISTA DA SIDEBAR -->
+            <nav id='sidebarNav'>
+                <ul id='listaIcones'>
+                    <li>
+                        <a href='#'>
+                            <img src='./assets/img/icone1.png' alt='Home'>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#'>
+                            <img src='./assets/img/icone2.png' alt='Browse'>
+                            Browse
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#'>
+                            <img src='./assets/img/icone3.png' alt='Liked songs'>
+                            Liked songs
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- LISTA DE MÚSICAS -->
+        <section id='musicas'>
+
+            <!-- CABECALHO DA SECTION -->
+            <header id='musicasCabec'>
+                <div id='perfil'>
+                    <img src='./assets/img/user.png' alt='Icon usuário'>
+                    <h2>Henrique</h2>
+                </div>
+                <div id='totSongs'>
+                    <p>1158 songs</p>
+                </div>
+            </header>
+
+            <!-- LISTA DE MÚSICAS -->
+            <div id='musicasLista'>
+
+                <!-- BOTÃO DE PLAY E PAUSE -->
+                <button id='listaButton'>Pause</button>
+
+                <!-- CABECALHO LISTA -->
+                <div id='musicasListaCabec'>
+                    <p class='primeiroItem'>TITLE</p>
+                    <p>ARTIST</p>
+                    <p>ALBUM</p>
+                </div>
+
+                <!-- INFO MÚSICAS -->
+                <ul id='musicasListaInfo'></ul>
+            </div>
+        </section>
+
+        <!-- PLAYER -->
+        <section id='player'>
+
+            <audio id='audioMusica' src=''></audio>
+
+            <div id='playing'>
+                <figure>
+                    <img id='fotoAlbum' src="./assets/img/album4.png" alt="Album">
+                    <figcaption>Legenda</figcaption>
+                </figure>
+
+                <div id="infoAlbum">
+                    <h2 id='nomeMusica'>Square One</h2>
+                    <p id='nomeArtist'>Coldplay</p>
+                </div>
+            </div>
+
+            <!-- SELECÃO DE MÚSICAS -->
+            <div id='selecao'>
+                <button id='anterior'></button>
+                <button id='onOff'></button>
+                <button id='posterior'></button>
+            </div>
+
+            <!-- VOLUME -->
+            <div id='vol'>
+                <input type='range' max='1' value='1' step='0.1'>
+            </div>
+        </section>
+    </main>
+    <script src='./scripts/script.js'></script>
+</body>
+</html>

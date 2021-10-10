@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+
+/*GERAIS*/
+body, main, div, section, ul, li, img, figure, p, header, nav, h2, a{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: none;
+    list-style: none;
+    color: #F1F1F1;
+}
+
+#sidebar, #player{
+    background: linear-gradient(0deg, #121212, #121212), #F1F1F1;
+}
+
+body{
+    font-family: Rubik, sans-serif;
+    background: linear-gradient(0deg, #181818, #181818), #FFFFFF;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+
+/*ASIDE*/
+#sidebar{
+    width: 12%;
+    height: calc(100% - 164px);
+    padding: 30px;
+}
+
+#logoKenzie{
+    margin-bottom: 25px;
+}
+
+#sidebarNav{}
+
+#listaIcones{}
+
+#listaIcones li{
+    margin-bottom: 17px;
+}
+
+#listaIcones a{
+    display: flex;
+    align-items: center;
+}
+
+#listaIcones img{
+    width: 28px;
+    margin-right: 20px;
+}
+
+
+/*SECTION MÚSICAS*/
+#musicas{
+    width: 83.2%;
+}
+
+#musicasCabec{
+    background-image: url(../assets/img/header.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+    position: relative;
+}
+
+/*USUÁRIO*/
+#perfil{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+#perfil img{
+    margin-right: 20px;
+}
+
+#perfil h2{
+    font-weight: lighter;
+}
+
+#totSongs{
+    position: absolute;
+    left: 80px;
+    bottom: 20px;
+}
+
+#totSongs p{
+    font-size: 28px;
+    font-weight: 300;
+}
+
+/*LISTA DE MÚSICAS*/
+#musicasLista{
+    padding: 20px 80px;
+}
+
+#musicasLista button{
+    background-color: #0047FF;
+    color: #F1F1F1;
+    border-radius: 7px;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    padding: 8px 17px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/*LISTA CABECALHO*/
+#musicasListaCabec{
+    display: flex;
+    padding: 7px 56px;
+    border-bottom: 2px solid #646464;
+}
+
+/*PRIMEIRO PARÁGRAFO: TITLE*/
+#musicasListaCabec .primeiroItem{
+    width: 60%;
+}
+
+#musicasListaCabec p{
+    width: 25%;
+    font-weight: 300;
+}
+
+/*LISTA TABELA*/
+#musicasListaInfo{
+    max-height: 175px;
+    overflow-y: scroll;
+}
+
+#musicasListaInfo li{
+    display: flex;
+    padding: 8px 56px;
+    border-bottom: 0.5px solid #646464;
+}
+
+#musicasListaInfo li .primeiroItem{
+    width: 60%;
+}
+
+#musicasListaInfo p{
+    width: 25%;
+}
+
+/*SECTION PLAYER*/
+#player{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 125px;
+}
+
+#playing{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-right: 80px;
+}
+
+#playing figure{
+    margin-right: 40px;
+}
+
+#playing figure img{}
+
+#playing figure figcaption{
+    display: none;
+}
+
+#infoAlbum{}
+
+#infoAlbum h2{
+    margin-bottom: 8px;
+}
+
+#infoAlbum p{} 
+
+#selecao{}
+
+#selecao button{
+    width: 31px;
+    height: 31px;
+    background-color: transparent;
+    border: none;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#anterior{
+    background-size: 23px;
+    background-image: url('../assets/img/previous.png');
+}
+
+#onOff{
+    background-size: cover;
+    background-image: url('../assets/img/play.png');
+    margin: 0 23px;
+}
+
+#onOff.pause{
+    background-image: url('../assets/img/pause.png');
+}
+
+#posterior{
+    background-size: 23px;
+    background-image: url('../assets/img/next.png');
+}
+
+#vol{
+    background-image: url('../assets/img/volume.png');
+    background-repeat: no-repeat;
+    background-size: 20px;
+    padding-left: 30px;
+}
