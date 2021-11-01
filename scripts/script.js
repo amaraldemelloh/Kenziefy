@@ -51,7 +51,7 @@ function construirPlaylist(musicaSelecionada, i) {
     const musica = document.createElement('p');
     const artista = document.createElement('p');
     const album = document.createElement('p');
-	attPlayer(baseMusicas[0].name, baseMusicas[0].artist);
+	attPlayer(baseMusicas[0].name, baseMusicas[0].artist, baseMusicas[atual].album);
 	
     li.dataset.id = i;
     musica.className = 'primeiroItem';
@@ -91,7 +91,7 @@ function tocar(event) {
 			onOff.classList.remove('pause');
 		}
 	};
-	attPlayer(baseMusicas[atual].name, baseMusicas[atual].artist);
+	attPlayer(baseMusicas[atual].name, baseMusicas[atual].artist, baseMusicas[atual].album);
 };
 
 // FUNÇÃO PAUSE
@@ -110,7 +110,7 @@ function proxima() {
 	tagAudio.play();
 	onOff.classList.add('pause');
 	
-	attPlayer(baseMusicas[atual].name, baseMusicas[atual].album);
+	attPlayer(baseMusicas[atual].name, baseMusicas[atual].artist, baseMusicas[atual].album);
 };
 
 function voltar() {
@@ -123,20 +123,20 @@ function voltar() {
 	tagAudio.play();
 	onOff.classList.add('pause');
 	
-	attPlayer(baseMusicas[atual].name, baseMusicas[atual].artist);
+	attPlayer(baseMusicas[atual].name, baseMusicas[atual].artist, baseMusicas[atual].album);
 };
 
 function ajustarVol() {
 	tagAudio.volume = vol.value;
 };
 
-function attPlayer(nomeMusica, nomeArtist) {
+function attPlayer(nomeMusica, nomeArtist, fotoAlbum) {
 	const musica = document.getElementById('nomeMusica');
  	const artist = document.getElementById('nomeArtist');
-	//const foto = document.getElementById('fotoAlbum');
-	//foto.src = fotoAlbum;
+	const album = document.getElementById('fotoAlbum');
 	musica.innerText = nomeMusica;
 	artist.innerText = nomeArtist;
+	album.src = `./assets/img/album${atual}.jfif`;
 }
 
 // EVENTOS 

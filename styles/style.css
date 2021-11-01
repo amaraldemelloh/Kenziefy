@@ -63,7 +63,7 @@ main{
 }
 
 #musicasCabec{
-    background-image: url(../assets/img/header.png);
+    background-color: #0c0d0c;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -174,7 +174,9 @@ main{
     margin-right: 40px;
 }
 
-#playing figure img{}
+#playing figure img{
+    height: 100px;
+}
 
 #playing figure figcaption{
     display: none;
