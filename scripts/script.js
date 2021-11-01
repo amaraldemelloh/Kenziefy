@@ -32,10 +32,12 @@ const onOff = document.getElementById('onOff');
 const anterior = document.getElementById('anterior');
 const posterior = document.getElementById('posterior');
 const vol = document.querySelector('#vol input');
-
+const totSongs = document.querySelector('div#totSongs');
 tagAudio.src = baseMusicas[0].path;
 
 let atual = 0;
+
+totSongs.innerHTML = `<p>${baseMusicas.length} songs</p>`;
 
 // CONSTRUÇÃO DA LISTA
 function construirPlaylist(musicaSelecionada, i) {
