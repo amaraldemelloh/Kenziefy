@@ -1,28 +1,34 @@
 const baseMusicas = [
     {
-        'name': 'Demonike',
-        'artist': 'LEALL, Luna',
-        'path': './assets/audios/demonike-pika.mp3',
-        'album': 'Demonike',
+		'name': "When The Party's Over",
+        'artist': 'Billie Eilish',
+        'path': "../assets/audios/7. When The Party's Over.mp3",
+        'album': "When The Party's Over",
     },
-    {
-        'name': 'Falador',
-        'artist': 'MC Cebezinho',
-        'path': './assets/audios/falador-cebezinho.mp3',
-        'album': 'Falador',
+	{
+        'name': 'Bad Guy',
+        'artist': 'Billie Eilish',
+        'path': '../assets/audios/bad guy.m4a',
+        'album': 'Bad Guy',
     },
-    {
-        'name': 'Menor do Beco',
-        'artist': 'MC Menor da VG',
-        'path': './assets/audios/menor-do-beco.mp3',
-        'album': 'Menor do Beco',
+	{
+        'name': 'Bellyache',
+        'artist': 'Billie Eilish',
+        'path': '../assets/audios/Bellyache.mp3',
+        'album': 'Bellyache',
     },
-    {
-        'name': 'Veneza',
-        'artist': 'Duzz',
-        'path': './assets/audios/veneza.mp3',
-        'album': 'Veneza',
+	{
+        'name': 'Bored',
+        'artist': 'Billie Eilish',
+        'path': '../assets/audios/Billie Eilish  Bored.mp3',
+        'album': 'Bored',
     },
+	{
+        'name': 'Happier Than Ever',
+        'artist': 'Billie Eilish',
+        'path': '../assets/audios/Happier Than Ever.mp3',
+        'album': 'Happier Than Ever',
+    }
 ];
 
 const listaMusicas = document.getElementById('musicasListaInfo');
