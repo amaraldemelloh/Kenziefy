@@ -51,7 +51,7 @@ function construirPlaylist(musicaSelecionada, i) {
     const musica = document.createElement('p');
     const artista = document.createElement('p');
     const album = document.createElement('p');
-	attPlayer(baseMusicas[0].name, baseMusicas[0].artist, baseMusicas[atual].album);
+	attPlayer(baseMusicas[0].name, baseMusicas[0].artist);
 	
     li.dataset.id = i;
     musica.className = 'primeiroItem';
@@ -77,7 +77,6 @@ function tocar(event) {
 	if (elementClique.tagName == 'LI') {
 		const musicaId = elementClique.dataset.id;
 		const musicaSelecionada = baseMusicas[musicaId];
-		console.log('Chegou');
 		tagAudio.src = musicaSelecionada.path;
 		atual = Number(musicaId);
 		tagAudio.play();
@@ -87,11 +86,10 @@ function tocar(event) {
 			tagAudio.play();
 			onOff.classList.add('pause');
 		} else {
-			tagAudio.pause();
-			onOff.classList.remove('pause');
+			pausar();
 		}
 	};
-	attPlayer(baseMusicas[atual].name, baseMusicas[atual].artist, baseMusicas[atual].album);
+	attPlayer(baseMusicas[atual].name, baseMusicas[atual].artist);
 };
 
 // FUNÇÃO PAUSE
@@ -110,7 +108,7 @@ function proxima() {
 	tagAudio.play();
 	onOff.classList.add('pause');
 	
-	attPlayer(baseMusicas[atual].name, baseMusicas[atual].artist, baseMusicas[atual].album);
+	attPlayer(baseMusicas[atual].name, baseMusicas[atual].artist);
 };
 
 function voltar() {
@@ -123,21 +121,21 @@ function voltar() {
 	tagAudio.play();
 	onOff.classList.add('pause');
 	
-	attPlayer(baseMusicas[atual].name, baseMusicas[atual].artist, baseMusicas[atual].album);
+	attPlayer(baseMusicas[atual].name, baseMusicas[atual].artist);
 };
 
 function ajustarVol() {
 	tagAudio.volume = vol.value;
 };
 
-function attPlayer(nomeMusica, nomeArtist, fotoAlbum) {
+function attPlayer(nomeMusica, nomeArtist) {
 	const musica = document.getElementById('nomeMusica');
  	const artist = document.getElementById('nomeArtist');
 	const album = document.getElementById('fotoAlbum');
 	musica.innerText = nomeMusica;
 	artist.innerText = nomeArtist;
 	album.src = `./assets/img/album${atual}.jfif`;
-}
+};
 
 // EVENTOS 
 onOff.addEventListener('click', tocar);
